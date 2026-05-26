@@ -3,7 +3,6 @@ services:
     name: breathe-esg-api
     env: python
     rootDir: backend
-    plan: free
     buildCommand: pip install -r requirements.txt && python manage.py migrate && python manage.py seed_demo && python manage.py collectstatic --noinput
     startCommand: gunicorn breathe.wsgi:application --bind 0.0.0.0:$PORT
     envVars:
@@ -17,7 +16,6 @@ services:
     name: breathe-esg-ui
     env: static
     rootDir: frontend
-    plan: free
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
