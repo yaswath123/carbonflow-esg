@@ -1,0 +1,4 @@
+source_record_id,plant_code,plant_name,material_text,posting_date,quantity,unit,spend_amount,currency,category_hint
+4900003101,BLR-01,Bangalore Assembly Plant,Diesel for generator,2026-04-03,1200,L,0,INR,diesel fuel
+4900003102,DE-77,Werk Hamburg,Erdgas,03.04.2026,330,gal,0,EUR,natural gas fuel
+4500009812,MUM-DC,Mumbai Distribution Centre,Packaging corrugate,2026-04-10,,EA,540000,INR,purchased goods

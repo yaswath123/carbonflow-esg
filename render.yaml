@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: breathe-esg-api
+    env: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt && python manage.py migrate && python manage.py seed_demo && python manage.py collectstatic --noinput
+    startCommand: gunicorn breathe.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: DJANGO_DEBUG
+        value: false
+      - key: CORS_ALLOW_ALL_ORIGINS
+        value: true
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+  - type: web
+    name: breathe-esg-ui
+    env: static
+    rootDir: frontend
+    plan: free
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        fromService:
+          type: web
+          name: breathe-esg-api
+          property: url
+        previewValue: http://127.0.0.1:8000

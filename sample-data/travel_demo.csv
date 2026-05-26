@@ -1,0 +1,5 @@
+trip_id,traveler_ref,category,start_date,end_date,origin,destination,distance,distance_unit,nights,amount,currency
+TR-1001,EMP-884,flight,2026-04-05,2026-04-05,BLR,DEL,1740,km,,42000,INR
+TR-1002,EMP-102,hotel,2026-04-06,2026-04-08,Delhi,Delhi,,,2,18000,INR
+TR-1003,EMP-884,flight,2026-04-12,2026-04-12,BLR,SFO,,,,185000,INR
+TR-1004,EMP-551,ground,2026-04-14,2026-04-14,Bangalore,Bangalore,32,mi,,2400,INR

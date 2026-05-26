@@ -1,0 +1,3 @@
+meter_id,facility_code,service_address,period_start,period_end,usage,unit,tariff,cost
+KA-BLR-7781,BLR-01,Bangalore Assembly Plant,2026-03-18,2026-04-17,184500,kWh,HT Industrial,1562200
+MH-MUM-1902,MUM-DC,Mumbai Distribution Centre,2026-03-25,2026-04-24,276000,kWh,Commercial Demand,2310000
