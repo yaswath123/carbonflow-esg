@@ -4,7 +4,8 @@ import { AlertTriangle, Check, Database, FileUp, Lock, RefreshCw, X } from "luci
 import "./styles.css";
 
 const API_ROOT = import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api";
-const API = API_ROOT.endsWith("/api") ? API_ROOT : `${API_ROOT.replace(/\/$/, "")}/api`;
+const API_ORIGIN = API_ROOT.startsWith("http") ? API_ROOT : `https://${API_ROOT}`;
+const API = API_ORIGIN.endsWith("/api") ? API_ORIGIN : `${API_ORIGIN.replace(/\/$/, "")}/api`;
 
 function formatKg(value) {
   const number = Number(value || 0);

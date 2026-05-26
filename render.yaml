@@ -25,5 +25,5 @@ services:
         fromService:
           type: web
           name: breathe-esg-api
-          property: url
+          property: host
         previewValue: http://127.0.0.1:8000
